@@ -1,0 +1,55 @@
+:root {
+    --segment-size: 7vw;
+    --segment-margin: 0.15vw;
+    --segment-full-size: calc(var(--segment-size) + 2 * var(--segment-margin));
+    --segment-border-radius: calc(var(--segment-size) / 15);
+    --digit-padding: 1vw;
+    --social-item-size: 44px;
+    --social-item-margin: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --segment-size: 9vw;
+        --segment-margin: 1px;
+    }
+}
+
+body {
+    background: black;
+}
+
+#tix {
+    font-size: 0;
+    margin: var(--segment-size) auto auto;
+    width: calc(9 * var(--segment-full-size) + 8 * var(--digit-padding));
+}
+
+@media screen and (max-height: 360px) {
+    #tix {
+        margin: 20px auto auto;
+    }
+}
+
+.digit {
+    --segments: 1vw;
+    padding: var(--digit-padding);
+    display: inline-block;
+    width: calc(var(--segments) * var(--segment-full-size) / 3);
+}
+
+.segment {
+    transition: background-color 0.8s;
+    display: inline-block;
+    height: var(--segment-size);
+    width: var(--segment-size);
+    padding: 0;
+    margin: var(--segment-margin);
+    border-radius: var(--segment-border-radius);
+}
+
+@media screen and (max-width: 768px) {
+    .description-container {
+        font-size: 4vw;
+    }
+}
