@@ -15,20 +15,25 @@
     }
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: black;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
 }
 
 #tix {
     font-size: 0;
-    margin: var(--segment-size) auto auto;
+    margin: 0 auto;
     width: calc(9 * var(--segment-full-size) + 8 * var(--digit-padding));
-}
-
-@media screen and (max-height: 360px) {
-    #tix {
-        margin: 20px auto auto;
-    }
 }
 
 .digit {

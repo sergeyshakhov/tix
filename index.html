@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,11 +13,11 @@
     </head>
 
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <noscript>
+            <p>JavaScript is required to view this clock. Please enable JavaScript in your browser.</p>
+        </noscript>
 
-        <div id="tix">
+        <main id="tix">
             <div id="hoursTens" class="digit" data-color="deepskyblue" style="--segments:3">
                 <div class="segment"></div>
                 <div class="segment"></div>
@@ -56,8 +53,8 @@
                 <div class="segment"></div>
                 <div class="segment"></div>
             </div>
-        </div>
+        </main>
 
-        <script src="js/main.js"></script>
+        <script src="js/main.js" defer></script>
     </body>
 </html>
