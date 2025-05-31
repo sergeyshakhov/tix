@@ -97,21 +97,15 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#sh-prompt {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-family: "Courier", monospace;
+    font-size: 16px;
+    z-index: 100;
+}
 
 /* ==========================================================================
    Helper classes

@@ -4,9 +4,19 @@ class Tix {
         this.hoursUnitElement = document.querySelector('#hoursUnits');
         this.minutesTensElement = document.querySelector('#minutesTens');
         this.minutesUnitElement = document.querySelector('#minutesUnits');
+        this.timePrompt = document.querySelector('#current-time');
 
+        setInterval(() => this.updatePromptTime(), 1000);
         setInterval(() => this.showTime(), 5000);
         this.showTime();
+        this.updatePromptTime();
+    }
+
+    updatePromptTime() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        this.timePrompt.textContent = `${hours}:${minutes}`;
     }
 
     flashDigit(element, digit) {
@@ -48,3 +58,4 @@ class Tix {
 }
 
 new Tix();
+
